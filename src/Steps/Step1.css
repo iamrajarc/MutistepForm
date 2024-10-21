@@ -1,0 +1,19 @@
+.step1-container {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .netflix-background {
+    opacity: 0.3; /* Adjust background transparency */
+  }
+  
+  .step1-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust to make it stand out */
+    padding: 20px;
+  }
+  

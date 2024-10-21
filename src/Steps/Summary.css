@@ -1,0 +1,19 @@
+/* Summary.css */
+.step-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(24, 1, 1, 0.1);
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  form .MuiTextField-root {
+    margin-bottom: 15px;
+  }
+  
