@@ -14,27 +14,30 @@ import {
 } from '@mui/material';
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5002'); // Connect to Socket.IO server
-
 const AdminDashboard = () => {
   const [forms, setForms] = useState([]);
 
   useEffect(() => {
-    // Request initial data from server
+    // Connect to the Socket.IO server
+    const socket = io('http://localhost:5002');
+   console.log('testing==========>')
+    // Request initial data from the server
     socket.emit('get-initial-data');
 
     // Listen for initial data from the server
     socket.on('initial-data', (data) => {
-      setForms(data);
+      console.log('data========>',data)
+      setForms(data); // Set the initial forms data
     });
 
     // Listen for real-time updates when new form data is inserted
     socket.on('new-data', (data) => {
-      setForms(data); // Update the table with new data
+      setForms(data); // Update the forms data with the new record
     });
 
     // Clean up the socket connection on component unmount
     return () => {
+      socket.disconnect();
       socket.off('initial-data');
       socket.off('new-data');
     };
