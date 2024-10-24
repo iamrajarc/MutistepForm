@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB URI (replace with your actual MongoDB URI)
-const dbURI = 'mongodb://localhost:27017/MultifactorAuthentication';
+const dbURI = 'mongodb://localhost:27017/MForm';
 
 // MongoDB connection
 mongoose.connect(dbURI)
